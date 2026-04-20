@@ -81,7 +81,7 @@ android {
       } else if (getConfigurableExtOrDefault("locationEngine") == "google") {
         java.srcDirs += 'src/main/location-engine-google'
       } else {
-        throw new GradleException("org.maplibre.reactnative.locationEngine.locationEngine should be one of [\"default\", \"google\"]`. \"${getConfigurableExtOrDefault("locationEngine")}\" was provided.")
+        throw new RuntimeException("org.maplibre.reactnative.locationEngine.locationEngine should be one of [\"default\", \"google\"]\". \"${getConfigurableExtOrDefault("locationEngine")}\" was provided.")
       }
     }
   }

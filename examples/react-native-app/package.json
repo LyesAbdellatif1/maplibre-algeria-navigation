@@ -15,6 +15,7 @@
   "dependencies": {
     "@maplibre-react-native/examples": "workspace:*",
     "@react-native-masked-view/masked-view": "0.3.2",
+    "invariant": "2.2.4",
     "react": "18.3.1",
     "react-native": "0.76.9",
     "react-native-gesture-handler": "~2.20.2",
@@ -26,6 +27,7 @@
     "@babel/core": "^7.26.0",
     "@react-native-community/cli": "^15.0.0",
     "@react-native/babel-preset": "0.76.9",
-    "@react-native/metro-config": "0.76.9"
+    "@react-native/metro-config": "0.76.9",
+    "@types/invariant": "^2"
   }
 }
