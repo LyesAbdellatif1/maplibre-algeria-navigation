@@ -58,3 +58,21 @@ TO START :
 npx react-native start
 npx react-native run-android
 Then open the emulator in Android Studio using the Device Manager (AVD Manager)
+
+
+To start the Tileserver from PowerShell : 
+
+PS C:\WINDOWS\system32> docker run --rm -it -v C:\planetiler\data:/data -p 8080:8080 maptiler/tileserver-gl /data/YOUR_FILE.mbtiles
+Starting tileserver-gl v5.6.0
+Using specified config file from config.json
+[SECURITY WARNING] Host header poisoning mitigation is NOT enabled.
+  Response URLs may be built from untrusted Host/X-Forwarded-* headers.
+  For production, set --public_url or allowedHosts in config/options or TILESERVER_GL_ALLOWED_HOSTS env.
+Starting server
+Listening at http://[::]:8080/
+The file "basic/style.json" is not a valid style file:
+undefined: glyphs: "glyphs" url must include a "{fontstack}" token
+undefined: glyphs: "glyphs" url must include a "{range}" token
+Startup complete
+
+
