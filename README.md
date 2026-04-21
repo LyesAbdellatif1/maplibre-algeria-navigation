@@ -52,3 +52,9 @@ set up your local development environment.
 ## Community
 
 Join the [`#maplibre-react-native`](https://osmus.slack.com/archives/C065DB4T2UB) or [`#maplibre`](https://osmus.slack.com/archives/C01G3D28DAB) [on the Open Street Map Slack](https://slack.openstreetmap.us/).
+
+TO START : 
+
+npx react-native start
+npx react-native run-android
+Then open the emulator in Android Studio using the Device Manager (AVD Manager)
