@@ -65,3 +65,6 @@ to start clean : PS C:\maplibre-react-native\examples\react-native-app> npx reac
 To start the Tileserver from PowerShell : 
 
 PS C:\WINDOWS\system32> docker run --rm -it -p 8080:8080 -v C:\planetiler\data:/data maptiler/tileserver-gl
+
+To check that the style.jason is good : 
+PS C:\WINDOWS\system32> Get-Content C:\planetiler\data\styles\basic\style.json | ConvertFrom-Json
