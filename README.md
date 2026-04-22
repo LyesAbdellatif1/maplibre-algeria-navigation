@@ -62,9 +62,15 @@ Then open the emulator in Android Studio using the Device Manager (AVD Manager)
 to start clean : PS C:\maplibre-react-native\examples\react-native-app> npx react-native start --reset-cache
 
 
-To start the Tileserver from PowerShell : 
+To start the Tileserver from PowerShell (auto mode) : 
 
 PS C:\WINDOWS\system32> docker run --rm -it -p 8080:8080 -v C:\planetiler\data:/data maptiler/tileserver-gl
+
+To start the Tileserver from PowerShell (using config file) : 
+PS C:\WINDOWS\system32> docker run --rm -it -p 8080:8080 `
+>>   -v C:\planetiler\data:/data `
+>>   maptiler/tileserver-gl `
+>>   --config /data/config.json
 
 To check that the style.jason is good : 
 PS C:\WINDOWS\system32> Get-Content C:\planetiler\data\styles\basic\style.json | ConvertFrom-Json
