@@ -68,3 +68,9 @@ PS C:\WINDOWS\system32> docker run --rm -it -p 8080:8080 -v C:\planetiler\data:/
 
 To check that the style.jason is good : 
 PS C:\WINDOWS\system32> Get-Content C:\planetiler\data\styles\basic\style.json | ConvertFrom-Json
+
+
+This command just showed the style.json file and opened it : 
+(Docker Tileserver need to be running so that this command works)
+PS C:\WINDOWS\system32> docker exec -it cc52a8045cc4 cat /data/styles/basic/style.json
+
