@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs grep -l \"expo-module-gradle-plugin\")",
+      "Bash(xargs grep -l \"gradlePlugin\\\\|expo.module\")",
+      "Bash(xargs grep -l \"gradlePlugins\\\\|gradle_plugins\\\\|plugins\")",
+      "Bash(node -e \"const p = require\\('C:/ProjectsRepo/maplibre-algeria-navigation/examples/expo-app/node_modules/expo-modules-autolinking/package.json'\\); console.log\\(p.version\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(xargs cat)",
+      "Bash(xargs grep -l \"expo-module-gradle-plugin\\\\|ExpoModulePlugin\\\\|id.*expo.module\")",
+      "Bash(xargs -I{} bash -c 'jar tf \"{}\" 2>/dev/null | grep -l \"expo-module-gradle-plugin\" && echo \"Found in {}\"')"
+    ]
+  }
+}
