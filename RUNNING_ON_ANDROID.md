@@ -110,6 +110,16 @@ adb devices
 ### Step 3 — Start the emulator
 Make sure the Android emulator is running before building (see Step 2).
 
+### Step 3b — Set up port forwarding for the local tile server
+If you use a **local tile server** (e.g. tileserver-gl at `localhost:8080`), run this once after the emulator starts:
+```powershell
+adb reverse tcp:8080 tcp:8080
+```
+
+**Why this is needed:** The Android emulator is a virtual machine with its own isolated network. Inside the emulator, `localhost` refers to the emulator itself — not your PC. `adb reverse` creates a tunnel so that `localhost:8080` inside the emulator forwards to your PC's port 8080, making glyphs, sprites, and tile requests all work correctly.
+
+You must re-run this command each time you start a new emulator session (it does not persist).
+
 ### Step 4 — Build and run
 Before running, make sure `CMAKE_VERSION` is set (if you set it as a system variable in Prerequisites step 6, open a fresh terminal so it takes effect):
 ```powershell
